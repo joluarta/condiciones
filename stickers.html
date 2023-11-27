@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .flex-v{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .flex-h{
+          display: flex;
+          align-items: center;
+        }
+        .flex-v img{ 
+          height: 200px;
+          max-width: 300px;
+          justify-content:space-around;
+        }
+      </style>
+
+    </head>
+    <body class="flex-v">
+        <p> Puedes tomar 10 stickers en total </p>
+        <div class="flex-h">
+          <div class="flex-v">
+            <img src="./imgs2/st1.png" class="flex-item" alt="">
+            <input name="" id="p-1" class="flex-item" >
+          </div>      
+          <div class="flex-v">
+            <img src="./imgs2/st2.png" class="flex-item" alt="">
+            <input name="" id="p-2" class="flex-item" >
+          </div>      
+          <div class="flex-v">
+            <img src="./imgs2/st3.png" class="flex-item" alt="">
+            <input name="" id="p-3" class="flex-item" >
+          </div>      
+        </div>    
+
+        <p id="result">  </p>
+
+        <button onclick="
+          n1 = Number(document.querySelector('#p-1').value)
+          n2 = Number(document.querySelector('#p-2').value)
+          n3 = Number(document.querySelector('#p-3').value)
+          suma = n1 + n2 + n3 
+          console.log(suma);
+          element = document.querySelector('#result')
+          if (suma <= 10){
+            element.innerHTML = 'Llevas ' + suma + ' stickers'
+          }
+          else {
+            element.innerHTML = 'Llevas ' + suma + ' stickers son demasiados, el maximo pueden ser 10. '
+          }
+        "> Verificar </button> 
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./border.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="./imgs1/st2.png" width="200">
+
+    <script>
+
+        let borderShow = true
+        const img = document.querySelector("img")
+    
+        img.addEventListener("click", () => {
+          if (borderShow) {
+            img.style.border = "solid blue 3px"
+            borderShow = false
+          }
+          else {
+            img.style.border = "none"
+            borderShow = true
+          }
+        })
+    
+      </script>
+
+
+
+  
+<script src="./index.js"></script>
+
+</body>
+
+</html>
